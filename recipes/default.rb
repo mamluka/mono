@@ -2,6 +2,7 @@ script "install_mono" do
   interpreter "bash"
   code <<-EOH
 sudo apt-get update
+sudo apt-get upgrade
 sudo apt-get install g++ -y
 sudo apt-get install bison -y
 sudo apt-get install gettext -y
