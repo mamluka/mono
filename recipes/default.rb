@@ -2,11 +2,7 @@ script "install_mono" do
   interpreter "bash"
   code <<-EOH
 
-# Fix nginx for later on. It's here so I don't have to fork the nginx repo.
-sudo echo "deb http://ppa.launchpad.net/nginx/stable/ubuntu lucid main" > /etc/apt/sources.list.d/opscode.list
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys C300EE8C
 sudo apt-get update
-
 sudo apt-get upgrade
 sudo apt-get install g++ -y
 sudo apt-get install bison -y
