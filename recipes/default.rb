@@ -2,6 +2,9 @@ script "install_mono" do
   interpreter "bash"
   code <<-EOH
 
+HAVE_MONO=`mono -V`
+if [ $? -eq 0 ]; then exit 0; fi
+  
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get install g++ -y
